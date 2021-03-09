@@ -24,31 +24,33 @@
         app:layout_constraintTop_toTopOf="@id/memeImageView"
         app:layout_constraintBottom_toBottomOf="@id/memeImageView"
         app:layout_constraintLeft_toLeftOf="@id/memeImageView"
-        app:layout_constraintRight_toRightOf="@id/memeImageView"
+        app:layout_constraintRight_toRightOf="@id/memeImageView"/>
 
     <Button
         android:id="@+id/shareButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@color/shareButtonColor"
+        android:onClick="shareMeme"
         android:padding="32dp"
         android:text="@string/share"
+        app:backgroundTint="#FF8F00"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/guideline"
-        android:background="@color/shareButtonColor"
-        android:onClick="shareMeme"/>
+        app:layout_constraintRight_toLeftOf="@id/guideline" />
 
     <Button
         android:id="@+id/nextButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@color/nextButtonColor"
+        android:onClick="showNextMeme"
         android:padding="32dp"
         android:text="@string/next"
+        app:backgroundTint="#AD1457"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toRightOf="@id/guideline"
-        android:background="@color/nextButtonColor"
-        android:onClick="nextMeme"/>
+        app:layout_constraintRight_toRightOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
