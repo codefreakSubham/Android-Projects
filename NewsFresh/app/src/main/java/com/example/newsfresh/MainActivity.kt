@@ -4,16 +4,18 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.LayoutManager
 
-class MainActivity : AppCompatActivity(), NewsItemClicked {
+class MainActivity : AppCompatActivity(), NewsListAdapter.NewsItemClicked {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        recyclerView.LayoutManager = LinearLayoutManager(this)
+        LayoutManager = LinearLayoutManager(this)
         val items = fetchData()
         val adapter = NewsListAdapter(items, this)
-        recyclerView.Adapter = adapter
+        RecyclerView.Adapter = adapter
     }
 
     private fun fetchData(): ArrayList<String>{

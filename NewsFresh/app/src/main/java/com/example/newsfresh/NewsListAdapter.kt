@@ -27,7 +27,7 @@ class NewsListAdapter(val items: ArrayList<String>, private val listener: NewsIt
     }
 
 
-}
+
 
 class NewsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
     val titleView: TextView = itemView.findViewById(R.id.title)
